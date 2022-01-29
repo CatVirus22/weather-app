@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather now</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/7a5badc389.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Dosis:wght@700&family=Roboto+Mono:wght@200&display=swap"
+      rel="stylesheet"
+    />
+
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container py-5">
+       <div class="col-xl-5"></div>
+       <h1>Weather now</h1>
+      <div class="row"> 
+      <div class="col-xl-5">
+      <form class="input-group rounded">
+        <input
+          type="search"
+          class="form-control rounded"
+          id="search-input"
+          placeholder="Enter a city or country"
+          aria-label="Search"
+          aria-describedby="button-addon2"
+        />
+        <button class="btn search-button" type="submit" id="button-addon2">
+          <i class="fas fa-search"></i>
+        </form>
+      </div>
+      <div class="row d-flex h-100" style="color: #282828">
+        <div class="col-xl-7">
+          <div id="demo1" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="d-flex justify-content-between mb-4 pb-2">
+                  <div>
+                    <h2 class="display-2" id="current-temp"><strong></strong></h2>
+                    <span id="day-info"></span>
+                    <br/>
+                    <span id="time-info"></span>
+                    <p id="city-info">London, United Kingdom</p>
+                  </div>
+                  <div>
+                    <img
+                      class="currentDay"
+                      src="https://img.icons8.com/color/48/000000/sun--v1.png"
+                      width="50px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <div class="col-xl-7">
+          <div id="demo2" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div
+                  class="d-flex justify-content-around text-center mb-4 pb-3 pt-2"
+                >
+                  <div class="flex-column">
+                    <p class="small"><strong>6°</strong></p>
+                    <i class="fas fa-cloud-moon fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>6:00</strong></p>
+                    <p class="mb-0" style="font-size: 0.65rem">AM</p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>9°</strong></p>
+                    <i class="fas fa-sun fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>9:00</strong></p>
+                    <p class="mb-0" style="font-size: 0.65rem">AM</p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>8°</strong></p>
+                    <i class="fas fa-sun fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>12:00</strong></p>
+                    <p class="mb-0" style="font-size: 0.65rem">PM</p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>8°</strong></p>
+                    <i class="fas fa-cloud fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>3:00</strong></p>
+                    <p class="mb-0" style="font-size: 0.65rem">PM</p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>8°</strong></p>
+                    <i class="fas fa-cloud fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>6:00</strong></p>
+                    <p class="mb-0" style="font-size: 0.65rem">PM</p>
+                  </div>
+                  
+                    <div class="flex-column">
+                    <p class="small"><strong>5°</strong></p>
+                    <i class="fas fa-moon fa-2x mb-3" src="https://img.icons8.com/external-justicon-lineal-color-justicon/64/000000/external-moon-weather-justicon-lineal-color-justicon-1.png"></i>
+                    <p class="mb-0"><strong>9:00</strong></p>
+                    <p class="mb-0" style="font-size: 0.65rem">PM</p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>6°</strong></p>
+                    <i
+                      class="fas fa-cloud-showers-heavy fa-2x mb-3"
+                      style="color: none"
+                    ></i>
+                    <p class="mb-0"><strong>12:00</strong></p>
+                    <p class="mb-0" style="font-size: 0.65rem">AM</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xl-7">
+          <div id="demo3" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- Carousel inner -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div
+                  class="d-flex justify-content-around text-center mb-4 pb-3 pt-2"
+                >
+                  <div class="flex-column">
+                    <p class="small"><strong>10°</strong></p>
+                    <i class="fas fa-sun fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>Sun</strong></p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>10°</strong></p>
+                    <i class="fas fa-sun fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>Mon</strong></p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>14°</strong></p>
+                    <i class="fas fa-sun fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>Tue</strong></p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>9°</strong></p>
+                    <i class="fas fa-cloud fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>Wed</strong></p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>7°</strong></p>
+                    <i class="fas fa-cloud fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>Thu</strong></p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>10°</strong></p>
+                    <i class="fas fa-sun fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>Fri</strong></p>
+                  </div>
+
+                  <div class="flex-column">
+                    <p class="small"><strong>10°</strong></p>
+                    <i class="fas fa-sun fa-2x mb-3" style="color: none"></i>
+                    <p class="mb-0"><strong>Sat</strong></p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <footer>
+        <div class="coder">
+          Coded by:
+          <img
+            class="kat"
+            src="https://img.icons8.com/stickers/50/000000/cat.png"
+          />
+          <span class="coderName">Marizabelle Aldana</span>
+        </div>
+      </footer>
+      <script src="src/index.js"></script>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+h1 {
+  padding-top: 10px;
+  font-size: 55px;
+  color: beige;
+  font-family: "Dosis", sans-serif;
+  text-align: left;
+}
+
+h2,
+p,
+.mb-3,
+.mb-0 {
+  color: beige;
+  text-align: center;
+}
+
+.rounded {
+  padding-bottom: 25px;
+}
+
+#day-info,
+#city-info,
+#time-info {
+  color: beige;
+  font-size: 20px;
+  text-align: left;
+}
+
+.display-2 {
+  text-align: left;
+}
+
+.currentDay {
+  display: block;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.fa-search,
+#icon-delimiter {
+  color: beige;
+  width: auto;
+  height: auto;
+}
+
+.mb-4 {
+  background: rgba(0, 0, 0, 0.1);
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/843/original/backgroundplain.png?1640871204");
+  image-resolution: fixed;
+  width: auto;
+  height: auto;
+  background-size: cover;
+}
+
+.carousel-indicators li {
+  background-color: #282828;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+
+.coder {
+  font-family: "Roboto Mono", monospace;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.coderName {
+  font-family: "Caveat", cursive;
+  font-size: 20px;
+}
+
+.kat {
+  width: 25px;
+  padding-bottom: 5px;
+}
