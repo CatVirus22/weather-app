@@ -39,6 +39,10 @@ p,
   height: auto;
 }
 
+#first-row {
+  padding-top: 25px;
+}
+
 .mb-4 {
   background: rgba(0, 0, 0, 0.1);
   padding-left: 10px;
