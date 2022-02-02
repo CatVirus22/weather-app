@@ -52,13 +52,13 @@ ul {
 }
 
 .mb-4 {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   padding-left: 10px;
   padding-right: 5px;
 }
 
 body {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/843/original/backgroundplain.png?1640871204");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/026/252/original/5797334.jpg?1643809928");
   image-resolution: fixed;
   width: auto;
   height: auto;
