@@ -52,7 +52,7 @@ ul {
 }
 
 .mb-4 {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.4);
   padding-left: 10px;
   padding-right: 5px;
 }
@@ -76,13 +76,20 @@ body {
   font-family: "Roboto Mono", monospace;
   font-weight: bolder;
   font-size: 15px;
+  color: antiquewhite;
+  text-align: center;
 }
 .coderName {
   font-family: "Caveat", cursive;
   font-size: 21px;
+  color: antiquewhite;
 }
 
 .kat {
   width: 25px;
   padding-bottom: 5px;
+}
+
+#footer-adjustment {
+  background: rgba(0, 0, 0, 0.5);
 }
