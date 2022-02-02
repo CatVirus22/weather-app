@@ -26,10 +26,11 @@ p,
   text-align: left;
 }
 
-.currentDay {
+#current-day {
   display: block;
   margin: 0 auto;
   padding-top: 20px;
+  padding-right: 10px;
 }
 
 .fa-search,
