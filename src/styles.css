@@ -6,12 +6,19 @@ h1 {
   text-align: left;
 }
 
-h2,
 p,
 .mb-3,
 .mb-0 {
   color: beige;
   text-align: center;
+}
+
+#current-temp {
+  color: beige;
+}
+
+ul {
+  list-style-type: none;
 }
 
 #day-info,
