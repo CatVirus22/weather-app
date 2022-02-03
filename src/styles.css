@@ -11,6 +11,7 @@ p,
 .mb-0 {
   color: beige;
   text-align: center;
+  font-size: 18px;
 }
 
 #current-temp {
