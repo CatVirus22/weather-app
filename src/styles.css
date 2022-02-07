@@ -20,6 +20,7 @@ p,
   font-size: 22px;
   position: relative;
   top: -36px;
+  font-weight: bolder;
 }
 
 #current-temp,
@@ -28,6 +29,10 @@ p,
 #separator {
   color: beige;
   text-align: left;
+}
+
+#current-temp {
+  padding-left: 25px;
 }
 
 #city-info,
