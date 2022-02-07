@@ -14,31 +14,55 @@ p,
   font-size: 18px;
 }
 
-#current-temp {
+#temp-celcious,
+#temp-farenheit,
+#separator {
+  font-size: 22px;
+  position: relative;
+  top: -36px;
+}
+
+#current-temp,
+#temp-celcious,
+#temp-farenheit,
+#separator {
   color: beige;
+  text-align: left;
+}
+
+#city-info,
+#weather-description {
+  text-transform: capitalize;
 }
 
 ul {
   list-style-type: none;
 }
 
+#wind-speed,
+#weather-description,
+#current-hmidity,
 #day-info,
 #city-info,
 #time-info {
   color: beige;
   font-size: 20px;
-  text-align: left;
 }
 
-.display-2 {
-  text-align: left;
+#wind-speed,
+#weather-description,
+#current-hmidity {
+  text-align: right;
+  padding-right: 30px;
+}
+
+#forecast-list {
+  text-align: right;
 }
 
 #current-day {
-  display: block;
-  margin: 0 auto;
-  padding-top: 20px;
-  padding-right: 10px;
+  padding-top: 5px;
+  padding-right: 15px;
 }
 
 .fa-search,

@@ -46,31 +46,40 @@
         </form>
       </div>
       <div class="row d-flex h-100" style="color: #282828" id="first-row">
-        <div class="col-xl-7">
+        <div class="col-xl-8">
           <div id="demo1" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <!-- Carousel inner -->
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="d-flex justify-content-between mb-4 pb-2">
-                  <div>
+                  <div class="col">
+                      <div class="display-2">
+                      <span class="float-left" id="current-temp"></span><span class="float-left" id="temp-celcious">  C°</span><span id="separator">  | </span>
+                      <span class="float-left" id="temp-farenheit">F°</span>
+                    </div>
                     <ul>
-                    <li class="display-2" id="current-temp"><strong></strong></li>
                     <li id="day-info"></li>
                     <li id="time-info"></li>
                     <li id="city-info">London, United Kingdom</li>
                     </ul>
                   </div>
-                  <div>
+                    <div class="col"></div>
+                    <ul id="forecast-list">
+                    <li>
                      <img src="https://img.icons8.com/officel/80/000000/sun.png" id="current-day"/> 
+                    </li>
+                    <li id="wind-speed"></li>
+                    <li id="weather-description"></li>
+                    <li id="current-hmidity"></li>
+                    </ul>
                   </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
 
-       <div class="col-xl-7">
+       <div class="col-xl-8">
           <div id="demo2" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <!-- Carousel inner -->
@@ -133,7 +142,7 @@
           </div>
         </div>
 
-        <div class="col-xl-7">
+        <div class="col-xl-8">
           <div id="demo3" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <!-- Carousel inner -->
