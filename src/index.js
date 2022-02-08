@@ -29,8 +29,16 @@ function currentTemp(response) {
 
 function dateInfo(timestamp) {
   let currentDate = new Date(timestamp);
+
   let currentHour = currentDate.getHours();
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+
   let currentMinutes = currentDate.getMinutes();
+  if (currentMinutes < 10) {
+    currentMinutes = `0${currentMinutes}`;
+  }
 
   let weekDays = [
     "Sunday",
