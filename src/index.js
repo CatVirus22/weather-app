@@ -27,6 +27,43 @@ function currentTemp(response) {
   cityElement.innerHTML = `${displayCity}°`;
 }
 
+function dateInfo(timestamp) {
+  let currentDate = new Date(timestamp);
+  let currentHour = currentDate.getHours();
+  let currentMinutes = currentDate.getMinutes();
+
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let currentYear = currentDate.getMonth();
+
+  let yearMonth = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  return `${weekDays[currentDate.getDay()]}, ${
+    yearMonth[currentDate.getMonth()]
+  } ${currentDate.getDate()}, ${currentDate.getFullYear()}.
+  Last time updated: ${currentHour}:${currentMinutes}`;
+}
+
 function currentForecast(response) {
   let displaySpeed = Math.round(response.data.wind.speed);
   let windElement = document.querySelector("#wind-speed");
@@ -37,9 +74,13 @@ function currentForecast(response) {
   let displayHumidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#current-hmidity");
 
+  let displayDate = response.data.dt;
+  let dateElement = document.querySelector("#current-date");
+
   windElement.innerHTML = `Wind speed: ${displaySpeed}km/h`;
   descriptionElement.innerHTML = `${displayDescription}`;
   humidityElement.innerHTML = ` Humidity: ${displayHumidity}%`;
+  dateElement.innerHTML = dateInfo(response.data.dt * 1000);
 }
 
 let apiKey = "d67292210b7875b5cf04663144f38fa9";
@@ -53,47 +94,3 @@ let searchInput = document.querySelector("#search-input");
 
 let countryInput = document.querySelector(".rounded");
 countryInput.addEventListener("submit", countrySubmit);
-
-let currentDate = new Date();
-
-let currentDay = currentDate.getDay();
-let currentHour = currentDate.getHours();
-let currentMinutes = currentDate.getMinutes();
-
-let weekDays = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
-
-let currentYear = currentDate.getMonth();
-
-let yearMonth = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
-];
-
-document.getElementById("day-info").innerHTML = `${
-  weekDays[currentDate.getDay()]
-}, ${
-  yearMonth[currentDate.getMonth()]
-} ${currentDate.getDate()}, ${currentDate.getFullYear()}`;
-
-document.getElementById(
-  "time-info"
-).innerHTML = `${currentHour}:${currentMinutes}`;
-
-// displayTemp function vars //

@@ -35,11 +35,6 @@ p,
   padding-left: 25px;
 }
 
-#city-info,
-#weather-description {
-  text-transform: capitalize;
-}
-
 ul {
   list-style-type: none;
 }
@@ -47,7 +42,7 @@ ul {
 #wind-speed,
 #weather-description,
 #current-hmidity,
-#day-info,
+#current-date,
 #city-info,
 #time-info {
   color: beige;
@@ -63,6 +58,14 @@ ul {
 
 #forecast-list {
   text-align: right;
+}
+
+#city-info {
+  text-transform: capitalize;
+}
+
+#weather-description::first-letter {
+  text-transform: capitalize;
 }
 
 #current-day {
