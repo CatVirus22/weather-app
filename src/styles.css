@@ -54,6 +54,7 @@ ul {
 #current-hmidity {
   text-align: right;
   padding-right: 30px;
+  margin-top: 0;
 }
 
 #forecast-list {

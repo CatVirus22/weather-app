@@ -85,10 +85,16 @@ function currentForecast(response) {
   let displayDate = response.data.dt;
   let dateElement = document.querySelector("#current-date");
 
+  let iconElement = document.querySelector("#weather-icon");
+
   windElement.innerHTML = `Wind speed: ${displaySpeed}km/h`;
   descriptionElement.innerHTML = `${displayDescription}`;
   humidityElement.innerHTML = ` Humidity: ${displayHumidity}%`;
   dateElement.innerHTML = dateInfo(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 
 let apiKey = "d67292210b7875b5cf04663144f38fa9";
