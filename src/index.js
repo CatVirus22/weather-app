@@ -14,9 +14,9 @@ function displayTemp(response) {
   console.log(response.data.main.temp);
   let cityTemp = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#current-temp");
-  let displayCity = Math.round(response.data.main.temp);
-  let cityElement = document.querySelector("#current-temp");
   tempElement.innerHTML = `${cityTemp}°`;
+
+  celsiusTemp = response.data.main.temp;
 }
 
 function currentTemp(response) {
@@ -25,6 +25,8 @@ function currentTemp(response) {
   let displayCity = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#current-temp");
   cityElement.innerHTML = `${displayCity}°`;
+
+  celsiusTemp = response.data.main.temp;
 }
 
 function dateInfo(timestamp) {
@@ -58,7 +60,8 @@ function dateInfo(timestamp) {
 
   return `${weekDays[currentDate.getDay()]}, ${
     yearMonth[currentDate.getMonth()]
-  } ${currentDate.getDate()}, ${currentDate.getFullYear()}.`;
+  } ${currentDate.getDate()}, ${currentDate.getFullYear()}.
+  `;
 }
 
 function timeInfo(timestamp) {
@@ -103,14 +106,33 @@ function currentForecast(response) {
   );
 }
 
+function displayFtemp(event) {
+  event.preventDefault();
+  let fahrenheit = (celsiusTemp * 9) / 5 + 32;
+  let fElement = document.querySelector("#current-temp");
+  fElement.innerHTML = Math.round(fahrenheit);
+}
+
+function displayCtemp(event) {
+  event.preventDefault();
+  let cElement = document.querySelector("#current-temp");
+  cElement.innerHTML = Math.round(celsiusTemp);
+}
+
 let apiKey = "d67292210b7875b5cf04663144f38fa9";
 let apiCity = `https://api.openweathermap.org/data/2.5/weather?q=London&appid=${apiKey}&&units=metric`;
 axios.get(apiCity).then(currentTemp);
 axios.get(apiCity).then(currentForecast);
 
-// displayTemp vars //
-
 let searchInput = document.querySelector("#search-input");
 
 let countryInput = document.querySelector(".rounded");
 countryInput.addEventListener("submit", countrySubmit);
+
+let fahrenheit = document.querySelector("#temp-fahrenheit");
+fahrenheit.addEventListener("click", displayFtemp);
+
+let celsius = document.querySelector("#temp-celsius");
+celsius.addEventListener("click", displayCtemp);
+
+celsiusTemp = null;

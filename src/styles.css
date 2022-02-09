@@ -14,8 +14,8 @@ p,
   font-size: 18px;
 }
 
-#temp-celcious,
-#temp-farenheit,
+#temp-celsius,
+#temp-fahrenheit,
 #separator {
   font-size: 22px;
   position: relative;
@@ -24,11 +24,15 @@ p,
 }
 
 #current-temp,
-#temp-celcious,
-#temp-farenheit,
+#temp-celsius,
+#temp-fahrenheit,
 #separator {
   color: beige;
   text-align: left;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 #current-temp {
@@ -71,7 +75,6 @@ ul {
 }
 
 #weather-icon {
-  padding-top: 5px;
   padding-right: 15px;
 }
 
