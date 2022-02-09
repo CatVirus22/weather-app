@@ -30,16 +30,6 @@ function currentTemp(response) {
 function dateInfo(timestamp) {
   let currentDate = new Date(timestamp);
 
-  let currentHour = currentDate.getHours();
-  if (currentHour < 10) {
-    currentHour = `0${currentHour}`;
-  }
-
-  let currentMinutes = currentDate.getMinutes();
-  if (currentMinutes < 10) {
-    currentMinutes = `0${currentMinutes}`;
-  }
-
   let weekDays = [
     "Sunday",
     "Monday",
@@ -68,8 +58,23 @@ function dateInfo(timestamp) {
 
   return `${weekDays[currentDate.getDay()]}, ${
     yearMonth[currentDate.getMonth()]
-  } ${currentDate.getDate()}, ${currentDate.getFullYear()}.
-  Last time updated: ${currentHour}:${currentMinutes}`;
+  } ${currentDate.getDate()}, ${currentDate.getFullYear()}.`;
+}
+
+function timeInfo(timestamp) {
+  let currentDate = new Date(timestamp);
+
+  let currentHour = currentDate.getHours();
+  if (currentHour < 10) {
+    currentHour = `0${currentHour}`;
+  }
+
+  let currentMinutes = currentDate.getMinutes();
+  if (currentMinutes < 10) {
+    currentMinutes = `0${currentMinutes}`;
+  }
+
+  return `Last time updated: ${currentHour}:${currentMinutes}`;
 }
 
 function currentForecast(response) {
@@ -82,8 +87,8 @@ function currentForecast(response) {
   let displayHumidity = response.data.main.humidity;
   let humidityElement = document.querySelector("#current-hmidity");
 
-  let displayDate = response.data.dt;
   let dateElement = document.querySelector("#current-date");
+  let timeElement = document.querySelector("#current-time");
 
   let iconElement = document.querySelector("#weather-icon");
 
@@ -91,6 +96,7 @@ function currentForecast(response) {
   descriptionElement.innerHTML = `${displayDescription}`;
   humidityElement.innerHTML = ` Humidity: ${displayHumidity}%`;
   dateElement.innerHTML = dateInfo(response.data.dt * 1000);
+  timeElement.innerHTML = timeInfo(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
