@@ -7,6 +7,7 @@ h1 {
 }
 
 p,
+span,
 .mb-3,
 .mb-0 {
   color: beige;
@@ -19,7 +20,7 @@ p,
 #separator {
   font-size: 22px;
   position: relative;
-  top: -36px;
+  top: -55px;
   font-weight: bolder;
 }
 
@@ -37,6 +38,8 @@ a:link {
 
 #current-temp {
   padding-left: 25px;
+  font-family: "Roboto Mono", monospace;
+  font-size: 100px;
 }
 
 ul {

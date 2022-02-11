@@ -17,12 +17,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600&family=Dosis:wght@700&family=Roboto+Mono:wght@200&display=swap"
-      rel="stylesheet"
-    />
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=Anton&family=Caveat:wght@600&family=Dosis:wght@700&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
 
      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
@@ -55,10 +54,9 @@
                 <div class="d-flex justify-content-between mb-4 pb-2">
                   <div class="col">
                       <div class="display-2">
-                     <span class="float-left" id="current-temp">°</span><span class="float-left" id="temp-celsius"><a href="#">  C°</a></span><span id="separator">  | </span>
+                     <span id="current-temp"></span><span class="float-left" id="temp-celsius"><a href="#">  C°</a></span><span id="separator">  | </span>
                       <span class="float-left" id="temp-fahrenheit"><a href="#">  F°</a></span>
-                    </div>
-                    <br />
+                      </div>
                      <ul>
                     <li id="current-date"></li>
                     <li id="current-time"></li>
@@ -69,8 +67,8 @@
                     <li>
                      <img  id="weather-icon"/> 
                     </li>
-                    <li id="wind-speed"></li>
                     <li id="weather-description"></li>
+                    <li id="wind-speed"></li>
                     <li id="current-hmidity"></li>
                     </ul>
                   </div>
@@ -148,47 +146,73 @@
             <!-- Carousel inner -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div
-                  class="d-flex justify-content-around text-center mb-4 pb-3 pt-2"
-                >
-                  <div class="flex-column">
-                    <p><strong>10°</strong></p>
+                <div class="d-flex justify-content-around text-center mb-4 pb-3 pt-2">
+                  <div class="flex-column" class="weather-forecast-temps">
+                     <div class="col">
+                     <span><strong>8°</strong></span>
+                     <span><strong> - </strong></span>
+                     <span><strong>8°</strong></span>
+                    </div>
                     <img src="https://img.icons8.com/officel/80/000000/cloud.png"/>
                     <p class="mb-0"><strong>Sun</strong></p>
                   </div>
 
                   <div class="flex-column">
-                    <p><strong>10°</strong></p>
+                    <div class="col">
+                     <span><strong>8°</strong></span>
+                     <span><strong> - </strong></span>
+                     <span><strong>8°</strong></span>
+                    </div>
                     <img src="https://img.icons8.com/officel/80/000000/partly-cloudy-day.png"/>
                     <p class="mb-0"><strong>Mon</strong></p>
                   </div>
 
                   <div class="flex-column">
-                    <p><strong>14°</strong></p>
+                     <div class="col">
+                     <span><strong>8°</strong></span>
+                     <span><strong> - </strong></span>
+                     <span><strong>8°</strong></span>
+                    </div>
                     <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
                     <p class="mb-0"><strong>Tue</strong></p>
                   </div>
 
                   <div class="flex-column">
-                    <p><strong>9°</strong></p>
+                     <div class="col">
+                     <span><strong>8°</strong></span>
+                     <span><strong> - </strong></span>
+                     <span><strong>8°</strong></span>
+                    </div>
                     <img src="https://img.icons8.com/officel/80/000000/partly-cloudy-rain.png"/>
                     <p class="mb-0"><strong>Wed</strong></p>
                   </div>
 
                   <div class="flex-column">
-                    <p><strong>7°</strong></p>
+                     <div class="col">
+                     <span><strong>8°</strong></span>
+                     <span><strong> - </strong></span>
+                     <span><strong>8°</strong></span>
+                    </div>
                     <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
                     <p class="mb-0"><strong>Thu</strong></p>
                   </div>
 
                   <div class="flex-column">
-                    <p><strong>10°</strong></p>
+                     <div class="col">
+                     <span><strong>8°</strong></span>
+                     <span><strong> - </strong></span>
+                     <span><strong>8°</strong></span>
+                    </div>
                     <img src="https://img.icons8.com/officel/80/000000/windy-weather.png"/>
                     <p class="mb-0"><strong>Fri</strong></p>
                   </div>
 
                   <div class="flex-column">
-                    <p><strong>10°</strong></p>
+                     <div class="col">
+                     <span><strong>8°</strong></span>
+                     <span><strong> - </strong></span>
+                     <span><strong>8°</strong></span>
+                    </div>
                     <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
                     <p class="mb-0"><strong>Sat</strong></p>
                   </div>

@@ -14,7 +14,7 @@ function displayTemp(response) {
   console.log(response.data.main.temp);
   let cityTemp = Math.round(response.data.main.temp);
   let tempElement = document.querySelector("#current-temp");
-  tempElement.innerHTML = `${cityTemp}°`;
+  tempElement.innerHTML = `${cityTemp}`;
 
   celsiusTemp = response.data.main.temp;
 }
@@ -24,7 +24,7 @@ function currentTemp(response) {
   console.log(response);
   let displayCity = Math.round(response.data.main.temp);
   let cityElement = document.querySelector("#current-temp");
-  cityElement.innerHTML = `${displayCity}°`;
+  cityElement.innerHTML = `${displayCity}`;
 
   celsiusTemp = response.data.main.temp;
 }
