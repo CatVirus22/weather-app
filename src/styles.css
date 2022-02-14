@@ -15,6 +15,10 @@ span,
   font-size: 18px;
 }
 
+#lowest {
+  color: rgba(234, 240, 246, 0.5);
+}
+
 #temp-celsius,
 #temp-fahrenheit,
 #separator {
@@ -38,7 +42,6 @@ a:link {
 
 #current-temp {
   padding-left: 25px;
-  font-family: "Roboto Mono", monospace;
   font-size: 100px;
 }
 

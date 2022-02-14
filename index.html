@@ -17,7 +17,7 @@
       crossorigin="anonymous"
     ></script>
 
-   <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -53,11 +53,11 @@
               <div class="carousel-item active">
                 <div class="d-flex justify-content-between mb-4 pb-2">
                   <div class="col">
-                      <div class="display-2">
-                     <span id="current-temp"></span><span class="float-left" id="temp-celsius"><a href="#">  C°</a></span><span id="separator">  | </span>
+                    <div class="display-2">
+                      <span class="float-left" id="current-temp">°</span><span class="float-left" id="temp-celsius"><a href="#">  C°</a></span><span id="separator">  | </span>
                       <span class="float-left" id="temp-fahrenheit"><a href="#">  F°</a></span>
-                      </div>
-                     <ul>
+                    </div>
+                    <ul>
                     <li id="current-date"></li>
                     <li id="current-time"></li>
                     <li id="city-info">London, United Kingdom</li>
@@ -65,7 +65,7 @@
                   </div>
                     <ul id="forecast-list">
                     <li>
-                     <img  id="weather-icon"/> 
+                     <img id="weather-icon"/> 
                     </li>
                     <li id="weather-description"></li>
                     <li id="wind-speed"></li>
@@ -77,145 +77,14 @@
           </div>
         </div>
 
-       <div class="col-xl-8">
-          <div id="demo2" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <!-- Carousel inner -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div
-                  class="d-flex justify-content-around text-center mb-4 pb-3 pt-2"
-                >
-                  <div class="flex-column">
-                    <p><strong>6°</strong></p>
-                    <img src="https://img.icons8.com/officel/80/000000/partly-cloudy-night.png"/>
-                    <p class="mb-0"><strong>6:00</strong></p>
-                    <p class="mb-0" style="font-size: 0.90rem">AM</p>
-                  </div>
-
-                  <div class="flex-column">
-                    <p><strong>9°</strong></p>
-                    <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
-                    <p class="mb-0"><strong>9:00</strong></p>
-                    <p class="mb-0" style="font-size: 0.90rem">AM</p>
-                  </div>
-
-                  <div class="flex-column">
-                    <p><strong>8°</strong></p>
-                   <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
-                    <p class="mb-0"><strong>12:00</strong></p>
-                    <p class="mb-0" style="font-size: 0.90rem">PM</p>
-                  </div>
-
-                  <div class="flex-column">
-                    <p><strong>8°</strong></p>
-                    <img src="https://img.icons8.com/officel/80/000000/partly-cloudy-day.png"/>
-                    <p class="mb-0"><strong>3:00</strong></p>
-                    <p class="mb-0" style="font-size: 0.90rem">PM</p>
-                  </div>
-
-                  <div class="flex-column">
-                    <p><strong>8°</strong></p>
-                    <img src="https://img.icons8.com/officel/80/000000/clouds.png"/>
-                    <p class="mb-0"><strong>6:00</strong></p>
-                    <p class="mb-0" style="font-size: 0.90rem">PM</p>
-                  </div>
-                  
-                    <div class="flex-column">
-                    <p><strong>5°</strong></p>
-                    <img src="https://img.icons8.com/officel/80/000000/bright-moon.png"/>
-                    <p class="mb-0"><strong>9:00</strong></p>
-                    <p class="mb-0" style="font-size: 0.90rem">PM</p>
-                  </div>
-
-                  <div class="flex-column">
-                    <p><strong>6°</strong></p>
-                    <img src="https://img.icons8.com/officel/80/000000/rain.png"/>
-                    <p class="mb-0"><strong>12:00</strong></p>
-                    <p class="mb-0" style="font-size: 0.90rem">AM</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
         <div class="col-xl-8">
-          <div id="demo3" class="carousel slide" data-ride="carousel">
+          <div id="row3" class="carousel slide" data-ride="carousel">
             <!-- Indicators -->
             <!-- Carousel inner -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <div class="d-flex justify-content-around text-center mb-4 pb-3 pt-2">
-                  <div class="flex-column" class="weather-forecast-temps">
-                     <div class="col">
-                     <span><strong>8°</strong></span>
-                     <span><strong> - </strong></span>
-                     <span><strong>8°</strong></span>
-                    </div>
-                    <img src="https://img.icons8.com/officel/80/000000/cloud.png"/>
-                    <p class="mb-0"><strong>Sun</strong></p>
-                  </div>
+                <div class="d-flex justify-content-around text-center mb-4 pb-3 pt-2" id="daily-forecast-temps">
 
-                  <div class="flex-column">
-                    <div class="col">
-                     <span><strong>8°</strong></span>
-                     <span><strong> - </strong></span>
-                     <span><strong>8°</strong></span>
-                    </div>
-                    <img src="https://img.icons8.com/officel/80/000000/partly-cloudy-day.png"/>
-                    <p class="mb-0"><strong>Mon</strong></p>
-                  </div>
-
-                  <div class="flex-column">
-                     <div class="col">
-                     <span><strong>8°</strong></span>
-                     <span><strong> - </strong></span>
-                     <span><strong>8°</strong></span>
-                    </div>
-                    <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
-                    <p class="mb-0"><strong>Tue</strong></p>
-                  </div>
-
-                  <div class="flex-column">
-                     <div class="col">
-                     <span><strong>8°</strong></span>
-                     <span><strong> - </strong></span>
-                     <span><strong>8°</strong></span>
-                    </div>
-                    <img src="https://img.icons8.com/officel/80/000000/partly-cloudy-rain.png"/>
-                    <p class="mb-0"><strong>Wed</strong></p>
-                  </div>
-
-                  <div class="flex-column">
-                     <div class="col">
-                     <span><strong>8°</strong></span>
-                     <span><strong> - </strong></span>
-                     <span><strong>8°</strong></span>
-                    </div>
-                    <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
-                    <p class="mb-0"><strong>Thu</strong></p>
-                  </div>
-
-                  <div class="flex-column">
-                     <div class="col">
-                     <span><strong>8°</strong></span>
-                     <span><strong> - </strong></span>
-                     <span><strong>8°</strong></span>
-                    </div>
-                    <img src="https://img.icons8.com/officel/80/000000/windy-weather.png"/>
-                    <p class="mb-0"><strong>Fri</strong></p>
-                  </div>
-
-                  <div class="flex-column">
-                     <div class="col">
-                     <span><strong>8°</strong></span>
-                     <span><strong> - </strong></span>
-                     <span><strong>8°</strong></span>
-                    </div>
-                    <img src="https://img.icons8.com/officel/80/000000/sun.png"/>
-                    <p class="mb-0"><strong>Sat</strong></p>
-                  </div>
                   </div>
                 </div>
               </div>
